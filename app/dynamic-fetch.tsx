@@ -5,13 +5,13 @@ export default async function Page() {
   });
   const products = await dynamic.json();
  
-  // Cache the static data and avoid slow origin fetches
-  const static = await fetch('https://api.vercel.app/blog', {
+  // Cache the statica data and avoid slow origin fetches
+  const statica = await fetch('https://api.vercel.app/blog', {
     next: {
       tags: ['blog'], // Invalidate with revalidateTag('blog') on-demand
     },
   });
-  const blog = await static.json();
+  const blog = await statica.json();
  
   return '...';
 }
