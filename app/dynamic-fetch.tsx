@@ -13,5 +13,5 @@ export default async function Page() {
   });
   const blog = await statica.json();
  
-  return '...';
+  return 'hi';
 }
